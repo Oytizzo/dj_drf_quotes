@@ -2,4 +2,9 @@
 
 {% block content %}
 <h1>Hello world! jello.</h1>
+{% for item in object_list %}
+{{ item.quote }}
+<br>
+{{ item.quote.author.name }}
+{% endfor %}
 {% endblock content %}
