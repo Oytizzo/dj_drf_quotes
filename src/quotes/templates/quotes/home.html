@@ -3,11 +3,11 @@
 {% block content %}
 <h1>Hello world! jello.</h1>
 {% for item in object_list %}
-    <p>{{ item.quote }}</p>
-    <p>{{ item.author.name }}</p>
-    {% for tag in item.quote_tag.all %}
-        {{ tag }}
-    {% endfor %}
+    <p>"{{ item.quote }}"</p>
+    <p>by <a href="#">{{ item.author.name }}</a></p>
+    <p>Tags:{% for tag in item.quote_tag.all %}
+        <a href="#">{{ tag }}</a>
+    {% endfor %}</p>
 <br><br>
 <hr>
 {% endfor %}
