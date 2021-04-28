@@ -40,6 +40,10 @@ INSTALLED_APPS = [
 
     # apps
     'quotes',
+    'quotes_api',
+
+    # 3rd party apps
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

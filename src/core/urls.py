@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('quotes.urls')),
+    path('quotes_api/', include('quotes_api.urls')),
 ]
