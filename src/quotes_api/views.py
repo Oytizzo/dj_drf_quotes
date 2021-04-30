@@ -6,7 +6,7 @@ from .serializers import QuoteSerializer, AuthorSerializer, QuoteTagSerializer
 
 
 class QuoteApiView(generics.ListAPIView):
-    queryset = Quote.objects.all()
+    queryset = Quote.objects.all().order_by('-id')
     serializer_class = QuoteSerializer
 
 
