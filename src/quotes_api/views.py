@@ -18,3 +18,13 @@ class AuthorApiView(generics.ListAPIView):
 class QuoteTagApiView(generics.ListAPIView):
     queryset = QuoteTag.objects.all()
     serializer_class = QuoteTagSerializer
+
+
+class QuoteApiDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Quote.objects.all()
+    serializer_class = QuoteSerializer
+
+
+class QuoteApiNewView(generics.ListCreateAPIView):
+    queryset = Quote.objects.all().order_by('-id')[:1]
+    serializer_class = QuoteSerializer

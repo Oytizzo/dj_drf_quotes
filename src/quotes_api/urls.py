@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import QuoteApiView, AuthorApiView, QuoteTagApiView
+from .views import QuoteApiView, AuthorApiView, QuoteTagApiView, QuoteApiDetailView, QuoteApiNewView
 
 urlpatterns = [
     path('quotes/', QuoteApiView.as_view(), name='quote_api'),
